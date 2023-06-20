@@ -10,6 +10,7 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
+              {/*精准匹配*/}
             <Route exact path="/">
               <Home />
             </Route>
