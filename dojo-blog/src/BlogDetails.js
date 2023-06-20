@@ -3,6 +3,7 @@ import useFetch from "./useFetch";
 
 const BlogDetails = () => {
   const { id } = useParams();
+  // reusing code with custom hooks
   const { data: blog, error, isPending } = useFetch('http://localhost:8000/blogs/' + id);
 
   return (
