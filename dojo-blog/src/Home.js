@@ -3,6 +3,7 @@ import BlogList from "./BlogList";
 import useFetch from "./useFetch";
 
 const Home = () => {
+    // deconstructing data to blogs
   const { error, isPending, data: blogs } = useFetch('http://localhost:8000/blogs')
 
   return (
