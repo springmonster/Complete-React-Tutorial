@@ -6,6 +6,7 @@ const useFetch = (url) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+      // AbortController 是一个 Web API，用于管理异步操作的生命周期，包括取消正在进行的操作
     const abortCont = new AbortController();
 
     setTimeout(() => {
@@ -13,7 +14,7 @@ const useFetch = (url) => {
       .then(res => {
         if (!res.ok) { // error coming back from server
           throw Error('could not fetch the data for that resource');
-        } 
+        }
         return res.json();
       })
       .then(data => {
@@ -38,5 +39,5 @@ const useFetch = (url) => {
 
   return { data, isPending, error };
 }
- 
+
 export default useFetch;
